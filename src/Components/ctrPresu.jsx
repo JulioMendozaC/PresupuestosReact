@@ -1,4 +1,6 @@
-import {Fragment} from 'react';
+import { Fragment } from 'react';
+import { revision } from '../Helpers';
+
 
 const CtrPresu = ({presupuesto, restante}) => {
     return ( 
@@ -8,7 +10,7 @@ const CtrPresu = ({presupuesto, restante}) => {
             <div className="alert alert-primary">
                 Presupuesto: $ {presupuesto}
             </div>
-            <div className="alert">
+            <div className={revision(presupuesto, restante)}>
                 Restante: ${restante}
             </div>
 
